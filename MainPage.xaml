@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="Fishtrace.MainPage"
+    x:Name="var_MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Fishtrace"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    KeyboardAcceleratorPlacementMode="Hidden">
+
+    <!--
+        This is the main content area of your application.
+        Add your UI elements here — for example, controls, layouts, and data-bound views.
+        Use 'dotnet new winui-page' to create additional pages and navigate to them via
+        the Frame in MainWindow (RootFrame).
+    -->
+    <Page.KeyboardAccelerators>
+        <KeyboardAccelerator Key="Number1" Modifiers="Control" Invoked="OnCtrl1"/>
+        <KeyboardAccelerator Key="Number2" Modifiers="Control" Invoked="OnCtrl2"/>
+        <KeyboardAccelerator Key="Number3" Modifiers="Control" Invoked="OnCtrl3"/>
+        <KeyboardAccelerator Key="Number4" Modifiers="Control" Invoked="OnCtrl4"/>
+        <KeyboardAccelerator Key="Number5" Modifiers="Control" Invoked="OnCtrl5"/>
+        <KeyboardAccelerator Key="Q" Modifiers="Control" Invoked="OnCtrlQ"/>
+        <KeyboardAccelerator Key="W" Modifiers="Control" Invoked="OnCtrlW"/>
+    </Page.KeyboardAccelerators>
+
+    <Grid> 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <Viewbox Grid.Row="2" Stretch="Uniform">
+            <Canvas x:Name="MyDrawingCanvas" Width="960" Height="540" Background="LightGray" Grid.Row="2">
+                <TextBlock x:Name="Console1" Text="Hello World!" FontSize="16"  Canvas.Left="0" Canvas.Top="50" Foreground="#561212"/>
+                <!-- <Image x:Name="UtilsBar" Source="Assets/80x80Fish.png" Height="80" Width="80" Canvas.Left="300" Canvas.Top="200" Stretch="Uniform"/>
+                
+                <Image x:Name="Testing1" Source="Assets/80x80FishWithGrayBackground.png" Height="80" Width="80" Canvas.Left="100" Canvas.Top="500" Stretch="Uniform"/>
+                <Image x:Name="Testing2" Source="Assets/80x80FishWithGrayBackground.png" Height="80" Width="80" Canvas.Left="200" Canvas.Top="500" Stretch="Uniform"/>
+                <Image x:Name="Testing3" Source="Assets/80x80FishWithGrayBackground.png" Height="80" Width="80" Canvas.Left="300" Canvas.Top="500" Stretch="Uniform"/>
+
+                <Image x:Name="f2" Source="Assets/180x30GrayBlock.png" Height="30" Width="180" Canvas.Left="300" Canvas.Top="500" Stretch="Uniform"/>
+                <Image x:Name="g" Source="Assets/180x30GrayBlock.png" Height="30" Width="180" Canvas.Left="300" Canvas.Top="500" Stretch="Uniform"/>
+                <Image x:Name="h" Source="Assets/180x30GrayBlock.png" Height="30" Width="180" Canvas.Left="300" Canvas.Top="500" Stretch="Uniform"/>
+                <Image x:Name="i" Source="Assets/180x30GrayBlock.png" Height="30" Width="180" Canvas.Left="300" Canvas.Top="500" Stretch="Uniform"/>
+                <Image x:Name="j" Source="Assets/180x30GrayBlock.png" Height="30" Width="180" Canvas.Left="300" Canvas.Top="500" Stretch="Uniform"/> -->
+
+
+                <Image x:Name="UpperBar1" Source="Assets/740x100WhiteBar.png" Width="740" Height="100" Canvas.Left="50" Canvas.Top="10" Stretch="Uniform"/>
+
+                <Image x:Name="RightBar1" Source="Assets/100x520WhiteBar.png" Width="100" Height="520" Canvas.Left="825" Canvas.Top="10" Stretch="Uniform"/>
+                <Image x:Name="RightBar2" Source="Assets/100x520WhiteBar.png" Width="100" Height="520" Canvas.Left="825" Canvas.Top="10" Stretch="Uniform"/>
+                <Image x:Name="RightBar3" Source="Assets/100x520WhiteBar.png" Width="100" Height="520" Canvas.Left="825" Canvas.Top="10" Stretch="Uniform"/>
+
+                <Image x:Name="RecordButton" Source="Assets/80x80RecordButtonWithHalo.png" Width="80" Height="80" Canvas.Left="70.656" Canvas.Top="20" Stretch="Uniform"/>
+                <Image x:Name="StopButton" Source="Assets/80x80StopButtonWithHalo.png" Width="80" Height="80" Canvas.Left="70.656" Canvas.Top="20" Stretch="Uniform"/>
+                <Image x:Name="PlayButton" Source="Assets/80x80PlayButtonWithHalo.png" Width="80" Height="80" Canvas.Left="193.956" Canvas.Top="20" Stretch="Uniform"/>
+                <Image x:Name="HaltButton" Source="Assets/80x80HaltButtonWithHalo.png" Width="80" Height="80" Canvas.Left="193.956" Canvas.Top="20" Stretch="Uniform"/>
+
+                <Image x:Name="AddButton" Source="Assets/80x80AddButton.png" Width="80" Height="80" Canvas.Left="835" Canvas.Top="31.65" Stretch="Uniform"/>
+                <Image x:Name="HomeButton" Source="Assets/45x20GrayBlock.png" Width="45" Height="20" Canvas.Left="852.454" Canvas.Top="4.527" Stretch="Uniform"/>
+
+                <Image x:Name="FilmSliderBar" Source="Assets/600x30SliderBar.png" Width="600" Height="30" Canvas.Left="137.5" Canvas.Top="500" Stretch="Uniform"/>
+
+                <Image x:Name="FFTButton" Source="Assets/80x80FishWithCyanHaloBackground.png" Width="80" Height="80" Canvas.Left="317.256" Canvas.Top="20" Stretch="Uniform"/>
+                <Image x:Name="PolyFitButton" Source="Assets/80x80FishWithCyanHaloBackground.png" Width="80" Height="80" Canvas.Left="440.556" Canvas.Top="20" Stretch="Uniform"/>
+
+                <Image x:Name="UpperBarPuller" Source="Assets/100x20GrayBlock.png" Width="100" Height="20" Canvas.Left="370" Canvas.Top="110" Stretch="Uniform"/>
+                <Image x:Name="RightBarPuller" Source="Assets/20x100GrayBlock.png" Width="20" Height="100" Canvas.Left="805" Canvas.Top="220" Stretch="Uniform"/>
+            </Canvas>
+        </Viewbox>
+        
+    </Grid>
+
+
+</Page>

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Fishtrace (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Fishtrace (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
